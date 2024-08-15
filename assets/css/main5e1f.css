@@ -63,6 +63,7 @@ body
     /* Optional: for rounded corners */
     margin: 0 auto;
     /* Center horizontally */
+    margin-bottom: 1rem;
 }
 
 .chart-iframe {

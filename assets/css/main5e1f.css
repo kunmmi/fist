@@ -41,6 +41,83 @@ body
     scroll-behavior: smooth;
 }
 
+nav {
+            position: relative;
+            width: 100%;
+            background-color: #0A0A22; /* Deep blue background for the navigation bar */
+            padding: 10px;
+            box-sizing: border-box;
+            z-index: 9999; /* Ensure the nav is on top of other elements */
+        }
+
+        .dropdown {
+            position: absolute;
+            display: none;
+            right: 10px;
+            top: 10px;
+        }
+
+        .menu-icon {
+            display: none;
+            width: 30px; /* Adjust the size as needed */
+            cursor: pointer;
+        }
+
+        /* Show menu icon only on mobile */
+        @media only screen and (max-width: 768px) {
+            .menu-icon {
+                display: block;
+            }
+
+             .dropdown {
+                display: block;
+                position: absolute;
+                right: 10px;
+                top: 10px;
+            }
+
+            .menu {
+                display: none;
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+                background-color: #0A0A22; /* Deep blue background for the dropdown menu */
+                position: absolute;
+                top: 40px;
+                right: 0;
+                width: 200px;
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8); /* Nice shadow effect */
+                border-radius: 5px; /* Rounded corners */
+                z-index: 1000; /* Ensure the dropdown is above other elements */
+            }
+
+            /* Display menu when checkbox is checked */
+            .menu-icon:checked + .menu {
+                display: block;
+            }
+
+            .menu li {
+                border-bottom: 1px solid #333; /* Light border between items */
+            }
+
+            .menu li:last-child {
+                border-bottom: none;
+            }
+
+            .menu li a {
+                display: block;
+                padding: 12px;
+                text-decoration: none;
+                color: white; /* White text color */
+                background-color: #0A0A22; /* Deep blue background */
+                transition: background-color 0.3s ease;
+            }
+
+            .menu li a:hover {
+                background-color: #1b263b; /* Slightly lighter blue on hover */
+            }
+        }
+
 .above-chart {
     width: 100%;
     text-align: center;
